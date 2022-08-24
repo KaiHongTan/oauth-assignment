@@ -23,19 +23,19 @@ Database migration is supported through Laravel.
 ## Demo
 
 Docker Containers containing the Lavarel Server and MySQL server is started up through Laravel Sail.
-![](https://i.ibb.co/ZNGzfqm/sail.gif)
+![](https://i.ibb.co/mSD4Tv1/ezgif-com-gif-maker-2.gif)
 ##
 Vite/VueJS front-end server is started through NPM.
 ![](https://i.ibb.co/9byD9fJ/vite.gif)
 ##
 Social Login via Google Account works as intended. (If you want to try for yourself, need to let me know in advance as this is not a full production app on Google so only whitelisted accounts through Google console can login)
-![](https://i.ibb.co/d7VS7Gn/google.gif)
+![](https://i.ibb.co/zPpcN52/ezgif-com-gif-maker-3.gif)
 ##
 To demonstrate that 1 user can login with more than 1 Social Login, firstly I login with a Google Account that has the name "James Tan".
-![](https://i.ibb.co/kyhZC65/james-google.gif)
+![](https://i.ibb.co/3c8mxP0/ezgif-com-gif-maker-4.gif)
 
 Now, I login through a Facebook account with the name "Kai Hong Tan" but since it detects that the email address already has an account, it logs into the same account recorded prior with the name "James Tan"
-![](https://i.ibb.co/SdyCwjs/james-facebook.gif)
+![](https://i.ibb.co/DgLhhY5/ezgif-com-gif-maker-7.gif)
 
 **Note that Facebook forces only HTTPS, so I had to manually remove the s from https in the callback URL, but it works just fine, just a temporary workaround since its not deployed on the web.**
 
