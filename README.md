@@ -1,64 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# OAuth Assignment
+Hi! I'm Tan Kai Hong. This is my attempt at the assignment as part of the application for the internship at EasyStore.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+I have chosen the PHP/Laravel OAuth Assignment.
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Description
+Based on the requirements of the assignment, I have created a user authentication system that supports Social Login via OAuth.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+For the backend, Laravel is used as instructed. Laravel Sail is used to dockerize the application to be able to be run in containers. The Laravel server and MySQL servers are running on different containers using Laravel Sail, Laravel's built-in development Docker solution.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Data is stored in MySQL Database as instructed.
 
-## Learning Laravel
+OAuth authentication is used for social login including Facebook and Google accounts as instructed.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+VueJS is used as the front-end.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Laravel Breeze is used as the basis of the authentication system, making use of the authentication capabilities within Laravel.
 
-## Laravel Sponsors
+Database migration is supported through Laravel.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+## Demo
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Docker Containers containing the Lavarel Server and MySQL server is started up through Laravel Sail.
+![](https://i.ibb.co/ZNGzfqm/sail.gif)
+##
+Vite/VueJS front-end server is started through NPM.
+![](https://i.ibb.co/9byD9fJ/vite.gif)
+##
+Social Login via Google Account works as intended. (If you want to try for yourself, need to let me know in advance as this is not a full production app on Google so only whitelisted accounts through Google console can login)
+![](https://i.ibb.co/d7VS7Gn/google.gif)
+##
+To demonstrate that 1 user can login with more than 1 Social Login, firstly I login with a Google Account that has the name "James Tan".
+![](https://i.ibb.co/kyhZC65/james-google.gif)
 
-## Contributing
+Now, I login through a Facebook account with the name "Kai Hong Tan" but since it detects that the email address already has an account, it logs into the same account recorded prior with the name "James Tan"
+![](https://i.ibb.co/SdyCwjs/james-facebook.gif)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**Note that Facebook forces only HTTPS, so I had to manually remove the s from https in the callback URL, but it works just fine, just a temporary workaround since its not deployed on the web.**
 
-## Code of Conduct
+## Insufficiencies
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+To be honest, it is the first time I'm using Laravel and VueJS, though I have previous experience with raw PHP and Javascript. My previous experiences with web dev is mostly React and NodeJS. It's probably not the best of works but I've tried my best to quickly learn and pick up everything required to achieve the end goal all within 1 day. I am a quick learner and will take initiative to learn things myself. 
 
-## Security Vulnerabilities
+Also, one thing that was not in this that was stated as a bonus in the task document is Unit Tests. Didn't have much time to look into it as I mentioned its the first time I've really dived into Laravel. 
+##
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+Through my personal ecommerce business, I've been a paying customer of EasyStore for more than 2 years and still is today. I believe I can provide value to improve EasyStore as a product. I will fully disclose and make sure that any potential conflict of interest is made clear.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Thank you for your consideration and time.
